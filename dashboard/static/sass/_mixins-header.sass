@@ -24,19 +24,13 @@
 @mixin navbar
     ul
         display: flex
+        flex-wrap: nowrap
 
         li
             a
                 font-size: 2rem
-                padding: 0 1.5rem
+                padding: 0 1rem
                 color: #666
-                @media ( max-width: 768px )
-                    display: block
-                    margin: 1.5rem
-                    padding: 1.5rem
-                    color: #fff
-                    background-color: #16cbeb
-                    border-bottom: .1rem solid #16cbeb
                 &:hover
                     color: #16cbeb
 

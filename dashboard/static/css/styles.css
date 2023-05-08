@@ -69,21 +69,12 @@ body .header-brand {
 }
 body .header-navbar ul {
   display: flex;
+  flex-wrap: nowrap;
 }
 body .header-navbar ul li a {
   font-size: 2rem;
-  padding: 0 1.5rem;
+  padding: 0 1rem;
   color: #666;
-}
-@media (max-width: 768px) {
-  body .header-navbar ul li a {
-    display: block;
-    margin: 1.5rem;
-    padding: 1.5rem;
-    color: #fff;
-    background-color: #16cbeb;
-    border-bottom: 0.1rem solid #16cbeb;
-  }
 }
 body .header-navbar ul li a:hover {
   color: #16cbeb;
@@ -98,7 +89,7 @@ body .error {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  top: 7.6rem;
+  top: 7rem;
   padding: 0 4%;
   z-index: 101;
   transition: 0.5s;
@@ -120,7 +111,7 @@ body .success {
   justify-content: space-between;
   position: fixed;
   width: 100%;
-  top: 7.6rem;
+  top: 7rem;
   padding: 0 4%;
   z-index: 101;
   transition: 0.5s;
@@ -146,11 +137,6 @@ body .main {
 body .main section {
   padding: 12rem 9%;
 }
-@media (max-width: 991px) {
-  body .main section {
-    padding: 2rem 9%;
-  }
-}
 body .main-login {
   display: flex;
   justify-content: center;
@@ -161,6 +147,7 @@ body .main-login {
 body .main-login .title {
   font-size: 3rem;
   color: #fff;
+  text-align: center;
 }
 body .main-login .form-login {
   display: flex;
@@ -213,6 +200,7 @@ body .main-register {
 body .main-register .title {
   font-size: 3rem;
   color: #fff;
+  text-align: center;
 }
 body .main-register .form-register {
   display: flex;
@@ -269,19 +257,19 @@ body .main-note .title {
 }
 body .main-note .container {
   justify-self: center;
-  width: 600px;
-  max-height: 300px;
-  padding: 1rem;
-  border: 1px solid #16cbeb;
+  margin: 10% 10%;
   overflow: hidden;
   overflow-y: scroll;
-  border-radius: 3rem;
+  border-radius: 2rem;
+  height: 300px;
 }
 body .main-note .notes {
+  width: 100vw;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.5rem 5rem;
   color: #fff;
-  border-bottom: 0.5px solid #666;
+  background: #666;
+  border-bottom: 0.5px solid #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -289,7 +277,7 @@ body .main-note .notes {
 body .main-note .notes .delete-note {
   cursor: pointer;
   color: rgba(255, 0, 0, 0.6666666667);
-  font-size: 2rem;
+  font-size: 3rem;
 }
 body .main-note .note {
   display: flex;
@@ -299,25 +287,42 @@ body .main-note .note {
   margin-top: 3rem;
 }
 body .main-note .note .box-note {
-  border-radius: 3rem;
-  padding: 1rem;
+  text-align: justify;
+  width: 100vw;
+  max-height: 6rem;
+  border-radius: 2rem;
+  padding: 1rem 3rem;
+  padding-right: 7rem;
+  font-size: 2rem;
+  position: absolute;
 }
 body .main-note .note .box-note:focus {
   border: 1px solid #16cbeb;
 }
 body .main-note .note .btn-note {
-  padding: 1.3rem 3rem;
-  margin-top: 1rem;
-  color: #16cbeb;
-  font-weight: bolder;
-  border: none;
-  border-radius: 2rem;
-  cursor: pointer;
+  position: relative;
+  font-size: 3rem;
+  background: none;
 }
-body .main-note .note .btn-note:hover {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0);
-  border: 1px solid #16cbeb;
+@media (min-width: 375px) {
+  body .main-note .note .btn-note {
+    left: 20rem;
+  }
+}
+@media (min-width: 425px) {
+  body .main-note .note .btn-note {
+    left: 23rem;
+  }
+}
+@media (min-width: 768px) {
+  body .main-note .note .btn-note {
+    left: 40rem;
+  }
+}
+@media (min-width: 1024px) {
+  body .main-note .note .btn-note {
+    left: 45rem;
+  }
 }
 body .footer {
   padding: 5rem 0;

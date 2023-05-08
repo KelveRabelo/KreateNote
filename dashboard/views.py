@@ -34,7 +34,7 @@ def delete_note():
     note = Note.query.get(noteId)
     if note:
         if note.user_id == current_user.id:
-            flash('Note deletado.', category='success')
+            flash('Note deletado.', category='error')
             db.session.delete(note)
             db.session.commit()
             
