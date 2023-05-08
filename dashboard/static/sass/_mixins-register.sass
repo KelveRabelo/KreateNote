@@ -1,0 +1,20 @@
+@use 'mixins'
+
+@mixin register
+    @include mixins.flex-center
+    gap: 3rem
+
+    .title
+        @include mixins.title
+
+    .form-register
+        @include mixins.form
+
+        .input-form-register
+            @include mixins.input-form
+
+        .label-form-register
+            @include mixins.label-form
+
+        .btn-form-register
+            @include mixins.btn-form

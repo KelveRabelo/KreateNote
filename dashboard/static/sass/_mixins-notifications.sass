@@ -1,0 +1,27 @@
+@mixin notifications
+    display: flex
+    justify-content: space-between
+    position: fixed
+    width: 100%
+    top: 7.6rem
+    padding: 0 4%
+    z-index: 101
+    transition: .5s
+    p
+        color: #fff
+        font-size: 1.8rem
+        padding: 1rem 0
+    span
+        color: #fff
+        font-size: 2.5rem
+        padding: .5rem 0
+        cursor: pointer
+
+@mixin error
+    @include notifications
+    background: #ff0000
+
+    
+@mixin success
+    @include notifications
+    background: #15ff00

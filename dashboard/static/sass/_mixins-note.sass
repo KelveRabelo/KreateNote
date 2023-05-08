@@ -1,0 +1,44 @@
+@use 'mixins'
+
+@mixin note
+    @include mixins.flex-center
+    .title
+        @include mixins.title
+        text-align: center
+        margin-bottom: 2rem
+
+    .container
+        justify-self: center
+        width: 600px
+        max-height: 300px
+        padding: 1rem
+        border: 1px solid #16cbeb
+        overflow: hidden
+        overflow-y: scroll
+        border-radius: 3rem
+    
+    .notes
+        font-size: 1.5rem
+        padding: 1rem
+        color: #fff
+        border-bottom: .5px solid #666
+        @include mixins.flex-center-space
+
+        .delete-note
+            cursor: pointer
+            color: #ff0000aa
+            font-size: 2rem
+
+    .note
+        @include mixins.flex-center
+        margin-top: 3rem
+
+
+        .box-note
+            border-radius: 3rem
+            padding: 1rem
+            &:focus
+                border: 1px solid #16cbeb
+                
+        .btn-note
+            @include mixins.btn-form

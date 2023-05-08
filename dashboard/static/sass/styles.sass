@@ -1,0 +1,70 @@
+
+//npm install -g sass
+//path static
+//sass --watch sass/styles.sass:css/styles.css
+
+@use 'mixins'
+@use 'mixins-root'
+@use 'mixins-html'
+@use 'mixins-body'
+@use 'mixins-header'
+@use 'mixins-main'
+@use 'mixins-login'
+@use 'mixins-register'
+@use 'mixins-footer'
+@use 'mixins-notifications'
+@use 'mixins-note'
+
+
+*
+    @include mixins-root.root
+
+html
+    @include mixins-html.html
+    
+body
+    @include mixins-body.body
+
+    //////////////////////HEADER////////////////////
+    .header
+        @include mixins-header.header
+
+        //LOGO
+        &-brand
+            @include mixins-header.logo
+
+        //MENU LINKS
+        &-navbar
+            @include mixins-header.navbar
+    ////////////////////////////////////////////////
+
+    //////////////////NOTIFICATIONS//////////////////
+    .error
+       @include mixins-notifications.error
+
+    .success
+        @include mixins-notifications.success
+    
+    .remove
+        display: none
+    ///////////////////////END/////////////////////// 
+
+
+    //////////////////////MAIN/////////////////////
+    .main
+        @include mixins-main.main
+
+        &-login
+            @include mixins-login.login
+
+        &-register
+            @include mixins-register.register
+
+        &-note
+            @include mixins-note.note   
+    ///////////////////////////////////////////////
+
+    //////////////////////FOOTER/////////////////////
+    .footer
+        @include mixins-footer.footer
+    /////////////////////////////////////////////////

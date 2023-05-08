@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}
+  Note
+{% endblock %}
+
+{% block content %}
+<section class="main-note">
+    <h2 class="title">Notes</h2>
+    <div class="container">
+      <ul>
+        {% for note in user.notes %}
+          <li class="notes">{{ note.data }}
+            <span class="delete-note" onclick="deleteNote({{ note.id }})">&times;</span> 
+          </li>
+          
+        {% endfor %}
+      </ul>
+    </div>
+      <form class="note" method="post">
+          <textarea class="box-note" name="note" id="note" cols="40" rows="3"></textarea><br>
+          <button class="btn-note" type="submit">Add note</button>
+      </form>
+    </div>
+</section>
+{% endblock %}

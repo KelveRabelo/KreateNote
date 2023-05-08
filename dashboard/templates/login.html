@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %}
+    Faça seu Login
+{% endblock %}
+
+{% block content %}
+<section class="main-login">
+    <h2 class="title">Login</h2>
+    <form class="form-login" method="post">
+        <label class="label-form-login"for="email">Usuário:</label>
+        <input class="input-form-login" type="email" name="email" id="email" placeholder="Digite seu email">
+
+        <label class="label-form-login"for="password">Senha:</label>
+        <input class="input-form-login" type="password" name="password" id="password" placeholder="Digite sua senha">
+
+        <button class="btn-form-login" type="submit">Entrar</button>
+    </form>
+</section>
+{% endblock %}

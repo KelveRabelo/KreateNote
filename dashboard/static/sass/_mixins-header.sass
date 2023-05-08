@@ -1,0 +1,46 @@
+@use 'mixins'
+
+@mixin header
+    @include mixins.flex-center-space
+    flex-wrap: nowrap
+    position: fixed
+    padding: 2rem 9% //4rem
+    top: 0
+    left: 0
+    right: 0
+    z-index: 1000
+    background-color: #fff
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
+    @media ( max-width: 991px )
+        padding: 2rem
+
+@mixin logo
+    font-size: 3rem
+    font-weight: bolder
+    color: #16cbeb
+    @media ( max-width: 425px )
+        font-size: 2.5rem
+
+@mixin navbar
+    ul
+        display: flex
+
+        li
+            a
+                font-size: 2rem
+                padding: 0 1.5rem
+                color: #666
+                @media ( max-width: 768px )
+                    display: block
+                    margin: 1.5rem
+                    padding: 1.5rem
+                    color: #fff
+                    background-color: #16cbeb
+                    border-bottom: .1rem solid #16cbeb
+                &:hover
+                    color: #16cbeb
+
+        .dark-mode
+                padding-left: .9rem
+                font-size: 2rem
+                cursor: pointer

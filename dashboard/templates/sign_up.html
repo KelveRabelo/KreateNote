@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% block title %}
+    Sign Up
+{% endblock %}
+
+{% block content %}
+<section class="main-register">
+    <h2 class="title">Cadastro</h2>
+    <form class="form-register" method="post">
+        <label class="label-form-register" for="first-name">Nome:</label>
+        <input class="input-form-register"type="text" name="first-name" id="first-name" placeholder="Nome" >
+
+        <label class="label-form-register" for="last-name">Sobrenome:</label>
+        <input class="input-form-register"type="text" name="last-name" id="last-name" placeholder="Sobrenome" >
+
+        <label class="label-form-register"for="email">Email:</label>
+        <input class="input-form-register" type="email" name="email" id="email" placeholder="Digite seu email" >
+
+        <label class="label-form-register"for="password">Senha:</label>
+        <input class="input-form-register" type="password" name="password" id="password" placeholder="Digite sua senha" >
+
+        <label class="label-form-register"for="password-confirm">Senha(Confirmar):</label>
+        <input class="input-form-register" type="password" name="password-confirm" id="password-confirm" placeholder="Confirmar senha">
+
+        <button class="btn-form-register" type="submit">Cadastrar</button>
+    </form>
+</section>
+{% endblock %}
