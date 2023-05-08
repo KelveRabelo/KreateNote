@@ -264,20 +264,28 @@ body .main-note .container {
   height: 300px;
 }
 body .main-note .notes {
+  position: relative;
   width: 100vw;
-  font-size: 1.5rem;
-  padding: 0.5rem 5rem;
+  font-size: 2.5rem;
+  padding: 2rem;
+  padding-right: 5rem;
   color: #fff;
   background: #666;
   border-bottom: 0.5px solid #fff;
+  word-wrap: break-word;
+  word-break: break-all;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 body .main-note .notes .delete-note {
+  position: absolute;
+  top: auto;
+  right: 10px;
   cursor: pointer;
   color: rgba(255, 0, 0, 0.6666666667);
   font-size: 3rem;
+  z-index: 1;
 }
 body .main-note .note {
   display: flex;
@@ -291,7 +299,7 @@ body .main-note .note .box-note {
   width: 100vw;
   max-height: 6rem;
   border-radius: 2rem;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   padding-right: 7rem;
   font-size: 2rem;
   position: absolute;
@@ -303,6 +311,7 @@ body .main-note .note .btn-note {
   position: relative;
   font-size: 3rem;
   background: none;
+  cursor: pointer;
 }
 @media (min-width: 375px) {
   body .main-note .note .btn-note {
@@ -322,6 +331,11 @@ body .main-note .note .btn-note {
 @media (min-width: 1024px) {
   body .main-note .note .btn-note {
     left: 45rem;
+  }
+}
+@media (min-width: 1440px) {
+  body .main-note .note .btn-note {
+    left: 67rem;
   }
 }
 body .footer {
