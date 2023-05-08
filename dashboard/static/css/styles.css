@@ -308,35 +308,11 @@ body .main-note .note .box-note:focus {
   border: 1px solid #16cbeb;
 }
 body .main-note .note .btn-note {
-  position: relative;
+  position: absolute;
   font-size: 3rem;
   background: none;
   cursor: pointer;
-}
-@media (min-width: 375px) {
-  body .main-note .note .btn-note {
-    left: 20rem;
-  }
-}
-@media (min-width: 425px) {
-  body .main-note .note .btn-note {
-    left: 23rem;
-  }
-}
-@media (min-width: 768px) {
-  body .main-note .note .btn-note {
-    left: 40rem;
-  }
-}
-@media (min-width: 1024px) {
-  body .main-note .note .btn-note {
-    left: 45rem;
-  }
-}
-@media (min-width: 1440px) {
-  body .main-note .note .btn-note {
-    left: 67rem;
-  }
+  right: 2rem;
 }
 body .footer {
   padding: 5rem 0;
