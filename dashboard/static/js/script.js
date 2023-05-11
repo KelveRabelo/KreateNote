@@ -1,56 +1,56 @@
 const darkMode = document.querySelector(".dark-mode");
-const main = document.querySelector("main");
-const titles = document.querySelectorAll(".title");
-const header = document.querySelector("header");
-const linkMenu = document.querySelectorAll(".link");
-const boxNote = document.querySelector(".box-note");
+const main = document.querySelector("main")
+const titles = document.getElementsByClassName("title")
+const header = document.querySelector("header")
+const linkMenu = document.querySelectorAll(".link")
+const boxNote = document.querySelector(".box-note")
 
-const bgDark = "#333";
-const bgLight = "#fff";
-const fontDark = "#666";
-const fontLight = "#fff";
-const storageKey = "dark-mode-enabled";
-
+const bgDark = "#333"
+const bgLight = "#fff"
+const fontDark = "#666"
+const fontLight = "#fff"
 //=================> DARK MODE <=================//
-function setDarkMode(enabled) {
-  if (enabled) {
-    darkMode.classList.replace("bi-moon-fill", "bi-sun-fill");
-    darkMode.style.color = "#fbff00";
+darkMode.addEventListener("click", () =>
+{
+    if(darkMode.classList[1] == "bi-moon-fill")
+    {
+        darkMode.classList.replace("bi-moon-fill", "bi-sun-fill")
+        darkMode.style.color = "#fbff00"
 
-    header.style.background = bgLight;
-    linkMenu.forEach(link => (link.style.color = fontDark));
+        header.style.background = bgLight
+        Array.from(linkMenu).forEach(link => {
+            link.style.color = fontDark
+        });
 
-    main.style.backgroundColor = bgLight;
-    titles.forEach(t => (t.style.color = fontDark));
+        main.style.backgroundColor = bgLight
+        Array.from(titles).forEach(t => { // converta a coleção HTML em um array e chame forEach()
+            t.style.color = fontDark
+        });
 
-    boxNote.style.backgroundColor = bgDark;
-    boxNote.style.color = fontLight;
-  } else {
-    darkMode.classList.replace("bi-sun-fill", "bi-moon-fill");
-    darkMode.style.color = "#666";
+        boxNote.style.backgroundColor = bgDark
+        boxNote.style.color = fontLight
 
-    header.style.background = bgDark;
-    linkMenu.forEach(link => (link.style.color = fontLight));
+    }
+    else
+    {
+        darkMode.classList.replace("bi-sun-fill", "bi-moon-fill")
+        darkMode.style.color = "#666"
 
-    main.style.backgroundColor = bgDark;
-    titles.forEach(t => (t.style.color = fontLight));
+        header.style.background = bgDark
+        Array.from(linkMenu).forEach(link => {
+            link.style.color = fontLight
+        });
 
-    boxNote.style.backgroundColor = bgLight;
-    boxNote.style.color = fontDark;
-  }
-}
+        main.style.backgroundColor = bgDark
+        Array.from(titles).forEach(t => { // converta a coleção HTML em um array e chame forEach()
+            t.style.color = fontLight
+        });   
 
-// initialize dark mode state on page load
-const darkModeEnabled = localStorage.getItem(storageKey) === "true";
-setDarkMode(darkModeEnabled);
+        boxNote.style.backgroundColor = bgLight
+        boxNote.style.color = fontDark
 
-// toggle dark mode on click
-darkMode.addEventListener("click", () => {
-  const enabled = !darkMode.classList.contains("bi-sun-fill");
-  localStorage.setItem(storageKey, enabled);
-  setDarkMode(enabled);
+    }
 });
-
 
     //darkMode.classList[1] == "bi-moon-fill" ? darkMode.classList.replace("bi-moon-fill", "bi-sun-fill") : darkMode.classList.replace("bi-sun-fill", "bi-moon-fill")
 

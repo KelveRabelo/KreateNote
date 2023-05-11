@@ -35,6 +35,9 @@ html ::-webkit-scrollbar-thumb:hover {
   background-color: #16cbeb;
 }
 
+body {
+  background: #333;
+}
 body .header {
   display: flex;
   justify-content: space-between;
