@@ -74,7 +74,7 @@ body .header-navbar ul {
 body .header-navbar ul li a {
   font-size: 2rem;
   padding: 0 1rem;
-  color: #666;
+  color: #999;
 }
 body .header-navbar ul li a:hover {
   color: #15ff00;
@@ -153,6 +153,9 @@ body .main-home .title {
   padding-bottom: 2rem;
   margin-top: 12.4vh;
   text-align: left;
+}
+body .main-home a {
+  font-size: 2rem;
 }
 body .main-login {
   display: flex;
