@@ -32,7 +32,7 @@ html ::-webkit-scrollbar {
   width: 0.4rem;
 }
 html ::-webkit-scrollbar-thumb:hover {
-  background-color: #16cbeb;
+  background-color: #15ff00;
 }
 
 body {
@@ -71,12 +71,12 @@ body .header-navbar ul {
   display: flex;
   flex-wrap: nowrap;
 }
-body .header-navbar ul li {
+body .header-navbar ul li a {
   font-size: 2rem;
   padding: 0 1rem;
   color: #666;
 }
-body .header-navbar ul li:hover {
+body .header-navbar ul li a:hover {
   color: #15ff00;
 }
 body .header-navbar ul .dark-mode {
@@ -140,13 +140,18 @@ body .main section {
   padding: 0 9% 9% 9%;
   color: #666;
 }
+body .main-home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 body .main-home .title {
   font-size: 2.5rem;
   color: #666;
   text-align: center;
   padding-bottom: 2rem;
   margin-top: 12.4vh;
-  margin-top: 10rem;
   text-align: left;
 }
 body .main-login {
@@ -346,7 +351,7 @@ body .footer .copyright {
   margin-bottom: 2rem;
 }
 body .footer .credit {
-  color: #16cbeb;
+  color: #15ff00;
 }
 body .footer .credit:hover {
   color: #fff;
