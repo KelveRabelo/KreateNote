@@ -6,10 +6,10 @@
 {% block content %}
 <section class="main-note">
     <h2 class="title">Notes</h2>
-    <div class="container">
+    <div class="container-notes">
       <ul>
         {% for note in user.notes %}
-          <li class="notes">{{ note.data }}
+          <li class="list-note">{{ note.data }}
             <span class="delete-note" onclick="deleteNote({{ note.id }})">&times;</span> 
           </li>
           

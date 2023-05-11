@@ -8,12 +8,14 @@
 @use 'mixins-html'
 @use 'mixins-body'
 @use 'mixins-header'
+@use 'mixins-home'
 @use 'mixins-main'
 @use 'mixins-login'
 @use 'mixins-register'
 @use 'mixins-footer'
 @use 'mixins-notifications'
 @use 'mixins-note'
+@use 'variables'
 
 
 *
@@ -53,6 +55,9 @@ body
     //////////////////////MAIN/////////////////////
     .main
         @include mixins-main.main
+
+        &-home
+            @include mixins-home.home
 
         &-login
             @include mixins-login.login

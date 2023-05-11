@@ -24,7 +24,7 @@
 
 <body>
 
-   <header class="header">
+   <header class="header dark">
 
       <!-- LOGO -->
       <a class="header-brand" href="#">KreateNote</a>
@@ -33,14 +33,14 @@
       <nav class="header-navbar">
          <ul>
             {% if user.is_authenticated %}
-            <li class="link-menu"><a href="/">Home</a></li>
-            <li class="link-menu"><a href="/note">Notas</a></li>
-            <li class="link-menu"><a href="/logout">Logout</a></li>
+            <li class="link-menu"><a class="link" href="/">Home</a></li>
+            <li class="link-menu"><a class="link" href="/note">Notas</a></li>
+            <li class="link-menu"><a class="link" href="/logout">Logout</a></li>
             {% else %}
-            <li class="link-menu"><a href="/login">Login</a></li>
-            <li class="link-menu"><a href="/sign_up">Sign Up</a></li>
+            <li class="link-menu"><a class="link" href="/login">Login</a></li>
+            <li class="link-menu"><a class="link" href="/sign_up">Sign Up</a></li>
             {% endif %}
-            <i class="bi bi-moon-fill dark-mode"></i>
+            <i class="bi bi-sun-fill dark-mode"></i>
          </ul>
       </nav>
       
@@ -76,10 +76,9 @@
       {% endblock %}
    </main>
 
-   <footer class="footer">
-      <p class="copyright">&copy; 2023 KreateNote | Todos os Direitos Reservados </p>
-      <p>Created by <span><a class="credit" href="https://www.linkedin.com/in/kelverabelo/" target="_blank">KelveRabelo</a></span></p>
-   </footer>
+   {% block footer %}
+
+   {% endblock %}
 
    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 </body>

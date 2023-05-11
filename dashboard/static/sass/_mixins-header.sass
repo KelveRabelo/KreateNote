@@ -1,4 +1,5 @@
 @use 'mixins'
+@use 'variables'
 
 @mixin header
     @include mixins.flex-center-space
@@ -9,7 +10,7 @@
     left: 0
     right: 0
     z-index: 1000
-    background-color: #fff
+    background-color: variables.$bg-color-light
     box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1)
     @media ( max-width: 991px )
         padding: 2rem
@@ -17,24 +18,26 @@
 @mixin logo
     font-size: 3rem
     font-weight: bolder
-    color: #16cbeb
+    color: variables.$color-primary
     @media ( max-width: 425px )
         font-size: 2.5rem
 
 @mixin navbar
+    
     ul
         display: flex
         flex-wrap: nowrap
 
         li
             a
-                font-size: 2rem
-                padding: 0 1rem
-                color: #666
-                &:hover
-                    color: #16cbeb
+            font-size: 2rem
+            padding: 0 1rem
+            color: variables.$font-color-dark
+            &:hover
+                color: variables.$color-primary
 
         .dark-mode
-                padding-left: .9rem
-                font-size: 2rem
-                cursor: pointer
+            padding-left: .9rem
+            font-size: 2rem
+            cursor: pointer
+            color: #fbff00
