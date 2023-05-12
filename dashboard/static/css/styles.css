@@ -136,9 +136,13 @@ body .main {
   background-color: #fff;
 }
 body .main section {
-  height: 100vh;
-  padding: 0 9% 9% 9%;
+  padding: 0 9% 3% 9%;
   color: #666;
+}
+@media (max-width: 992px) {
+  body .main section {
+    height: 70vh;
+  }
 }
 body .main-home {
   display: flex;
@@ -270,8 +274,6 @@ body .main-note {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  overflow-x: hidden;
-  overflow-y: hidden;
 }
 body .main-note .title {
   font-size: 2.5rem;
