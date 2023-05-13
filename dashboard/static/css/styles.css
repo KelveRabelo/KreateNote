@@ -41,6 +41,7 @@ body .header {
   align-items: center;
   flex-wrap: nowrap;
   position: fixed;
+  height: 7.5vh;
   padding: 2rem 9%;
   top: 0;
   left: 0;
@@ -144,9 +145,8 @@ body .main-home {
 body .main-home .title {
   font-size: 2.5rem;
   color: #666;
-  text-align: center;
-  padding-bottom: 2rem;
-  margin-top: 12.4vh;
+  margin: 1rem;
+  margin-top: -50vh;
 }
 body .main-home a {
   font-size: 2rem;
@@ -160,9 +160,12 @@ body .main-login {
 body .main-login .title {
   font-size: 2.5rem;
   color: #666;
-  text-align: center;
-  padding-bottom: 2rem;
-  margin-top: 12.4vh;
+  margin: 1rem;
+}
+@media (max-height: 991px) {
+  body .main-login .title {
+    margin-top: -20vh;
+  }
 }
 body .main-login .form-login {
   display: flex;
@@ -212,9 +215,13 @@ body .main-register {
 body .main-register .title {
   font-size: 2.5rem;
   color: #666;
-  text-align: center;
-  padding-bottom: 2rem;
-  margin-top: 12.4vh;
+  margin: 1rem;
+  margin-top: 15vh;
+}
+@media (max-width: 991px) {
+  body .main-register .title {
+    margin-top: -20vh;
+  }
 }
 body .main-register .form-register {
   display: flex;
@@ -264,13 +271,12 @@ body .main-note {
 body .main-note .title {
   font-size: 2.5rem;
   color: #666;
-  text-align: center;
-  padding-bottom: 2rem;
-  margin-top: 12.4vh;
+  margin: 1rem;
 }
 body .main-note .container-notes {
   width: 82vw;
   height: 60%;
+  margin: 1rem;
   overflow: hidden;
   overflow-y: scroll;
   border-radius: 2rem;
