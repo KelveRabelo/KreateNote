@@ -88,7 +88,7 @@ body .error {
   justify-content: space-between;
   position: fixed;
   width: 100vw;
-  top: 7rem;
+  top: 7.5vh;
   padding: 0 2rem;
   z-index: 101;
   transition: 0.5s;
@@ -110,7 +110,7 @@ body .success {
   justify-content: space-between;
   position: fixed;
   width: 100vw;
-  top: 7rem;
+  top: 7.5vh;
   padding: 0 2rem;
   z-index: 101;
   transition: 0.5s;
@@ -145,7 +145,7 @@ body .main-home {
 body .main-home .title {
   font-size: 2.5rem;
   color: #666;
-  margin: 1rem;
+  margin-top: 2rem;
   margin-top: -50vh;
 }
 body .main-home a {
@@ -160,7 +160,7 @@ body .main-login {
 body .main-login .title {
   font-size: 2.5rem;
   color: #666;
-  margin: 1rem;
+  margin-top: 2rem;
 }
 @media (max-height: 991px) {
   body .main-login .title {
@@ -215,7 +215,7 @@ body .main-register {
 body .main-register .title {
   font-size: 2.5rem;
   color: #666;
-  margin: 1rem;
+  margin-top: 2rem;
   margin-top: 15vh;
 }
 @media (max-width: 991px) {
@@ -271,7 +271,7 @@ body .main-note {
 body .main-note .title {
   font-size: 2.5rem;
   color: #666;
-  margin: 1rem;
+  margin-top: 2rem;
 }
 body .main-note .container-notes {
   width: 82vw;

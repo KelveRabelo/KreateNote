@@ -20,9 +20,9 @@ else
 const darkMode = document.querySelector(".dark-mode");
 const header = document.querySelector("header")
 const section = document.querySelector("section")
-const footer = document.querySelector("footer")
+//const footer = document.querySelector("footer")
 const titles = document.getElementsByClassName("title")
-const boxNote = document.getElementsByTagName("textarea")[0]
+const boxNote = document.querySelector('textarea[name="note"]');
 
 
 const bgDark = "#333"
@@ -52,13 +52,17 @@ function light()
 
     header.style.background = bgLight
     section.style.backgroundColor = bgLight
-    footer.style.backgroundColor = bgLight
+    //footer.style.backgroundColor = bgLight
     Array.from(titles).forEach(t => { // converta a coleção HTML em um array e chame forEach()
         t.style.color = fontDark
     });
 
-    boxNote.style.backgroundColor = bgDark
-    boxNote.style.color = fontLight
+    if(boxNote !== null)
+    {
+        boxNote.style.backgroundColor = bgDark
+        boxNote.style.color = fontLight
+    }
+    
     
 
     theme = "light"
@@ -75,8 +79,11 @@ function dark()
         t.style.color = fontLight
     });   
 
-    boxNote.style.backgroundColor = bgLight
-    boxNote.style.color = fontDark
+    if(boxNote !== null)
+    {
+        boxNote.style.backgroundColor = bgLight
+        boxNote.style.color = fontDark
+    }
 
     theme = "dark"
     localStorage.setItem("theme", theme)
