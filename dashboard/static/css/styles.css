@@ -220,7 +220,7 @@ body .main-register .title {
 }
 @media (max-width: 991px) {
   body .main-register .title {
-    margin-top: -20vh;
+    margin-top: -15vh;
   }
 }
 body .main-register .form-register {
