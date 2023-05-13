@@ -17,12 +17,11 @@ else
     light()
 }
 
-
 const darkMode = document.querySelector(".dark-mode");
-const main = document.querySelector("main")
-const titles = document.getElementsByClassName("title")
 const header = document.querySelector("header")
-//const linkMenu = document.querySelectorAll(".link")
+const section = document.querySelector("section")
+const footer = document.querySelector("footer")
+const titles = document.getElementsByClassName("title")
 const boxNote = document.getElementsByTagName("textarea")[0]
 
 
@@ -44,7 +43,7 @@ darkMode.addEventListener("click", () =>
     }
 });
 
-    //darkMode.classList[1] == "bi-moon-fill" ? darkMode.classList.replace("bi-moon-fill", "bi-sun-fill") : darkMode.classList.replace("bi-sun-fill", "bi-moon-fill")
+//darkMode.classList[1] == "bi-moon-fill" ? darkMode.classList.replace("bi-moon-fill", "bi-sun-fill") : darkMode.classList.replace("bi-sun-fill", "bi-moon-fill")
 
 function light()
 {
@@ -52,11 +51,8 @@ function light()
     darkMode.style.color = "#fbff00"
 
     header.style.background = bgLight
-    // Array.from(linkMenu).forEach(link => {
-    //     link.style.color = fontDark
-    // });
-
-    main.style.backgroundColor = bgLight
+    section.style.backgroundColor = bgLight
+    footer.style.backgroundColor = bgLight
     Array.from(titles).forEach(t => { // converta a coleção HTML em um array e chame forEach()
         t.style.color = fontDark
     });
@@ -74,11 +70,7 @@ function dark()
     darkMode.style.color = "#666"
 
     header.style.background = bgDark
-    // Array.from(linkMenu).forEach(link => {
-    //     link.style.color = fontLight
-    // });
-
-    main.style.backgroundColor = bgDark
+    section.style.backgroundColor = bgDark
     Array.from(titles).forEach(t => { // converta a coleção HTML em um array e chame forEach()
         t.style.color = fontLight
     });   
@@ -89,9 +81,6 @@ function dark()
     theme = "dark"
     localStorage.setItem("theme", theme)
 }
-
-
-
 
 
 //=================> NOTIFICATIONS <=================//

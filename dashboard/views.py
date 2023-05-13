@@ -19,14 +19,15 @@ def note():
     if request.method == "POST":
         note = request.form.get("note")
         if len(note) < 1:
-            flash('Note curto!', category='error')
+            flash('Short note!', category='error')
         else:
             new_note = Note(data=note, user_id=current_user.id)
             db.session.add(new_note)
             db.session.commit()
-            flash('Note adicionado.', category='success')
-
+            flash('Note added.', category='success')
     return render_template("note.html", user=current_user)
+
+
 @views.route('/delete-note', methods=['POST'])
 def delete_note():
     note = json.loads(request.data)
@@ -34,23 +35,10 @@ def delete_note():
     note = Note.query.get(noteId)
     if note:
         if note.user_id == current_user.id:
-            flash('Note deletado.', category='error')
+            flash('Deleted note.', category='error')
             db.session.delete(note)
             db.session.commit()
             
             return jsonify({'status': 'success'})
     
     return jsonify({'status': 'error', 'message': 'Note não encontrado.'})
-
-# @views.route('/delete-note', methods=['POST'])
-# def delete_note():
-#     note = json.loads(request.data)
-#     noteId = note['noteId']
-#     note = Note.query.get(noteId)
-#     if note:
-#         if note.user_id == current_user.id:
-#             flash('Note deletado.', category='success')
-#             db.session.delete(note)
-#             db.session.commit()
-
-#             return redirect(url_for('views.note'))

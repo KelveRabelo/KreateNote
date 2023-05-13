@@ -13,7 +13,7 @@
 
 @mixin title
     font-size: 2.5rem
-    color: variables.$font-color-dark
+    color: variables.$font-dark
     text-align: center
     padding-bottom: 2rem
     margin-top: 12.4vh
@@ -22,33 +22,32 @@
     @include flex-center
     width: 35rem
     height: auto
-    padding: 3rem 0
-    font-size: 1.8rem
+    padding: 2rem 0
+    font-size: 1.5rem
     border: .5rem outset variables.$color-primary
     border-radius: 3rem
 
 @mixin label-form
     align-self: flex-start
-    margin-left: 6rem
-    margin-top: 2rem
+    margin-left: 6.8rem
+    margin-top: 1.5rem
 
 @mixin input-form
     padding: 1rem 3rem
-    margin: .8rem 0
-    color: #333
+    margin: .5rem 0
+    color: variables.$font-dark
     border: 1px solid #999
     border-radius: 2rem
     &:focus
         border: 2px solid variables.$color-primary
 
 @mixin btn-form
-    padding: 1.3rem 3rem
-    margin-top: 1rem
+    padding: 1rem 3rem
+    margin-top: 1.5rem
     color: variables.$color-primary
     font-weight: bolder
-    border: none
     border-radius: 2rem
     cursor: pointer
     &:hover
-        background-color: #00000000
+        background: variables.$bg-light
         border: 1px solid variables.$color-primary

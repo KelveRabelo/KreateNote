@@ -35,9 +35,6 @@ html ::-webkit-scrollbar-thumb:hover {
   background-color: #15ff00;
 }
 
-body {
-  background: #333;
-}
 body .header {
   display: flex;
   justify-content: space-between;
@@ -49,7 +46,7 @@ body .header {
   left: 0;
   right: 0;
   z-index: 1000;
-  background-color: #fff;
+  background: #fff;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 @media (max-width: 991px) {
@@ -132,17 +129,11 @@ body .success span {
 body .remove {
   display: none;
 }
-body .main {
-  background-color: #fff;
-}
 body .main section {
+  background: #fff;
+  height: 100vh;
   padding: 0 9% 3% 9%;
   color: #666;
-}
-@media (max-width: 992px) {
-  body .main section {
-    height: 70vh;
-  }
 }
 body .main-home {
   display: flex;
@@ -156,7 +147,6 @@ body .main-home .title {
   text-align: center;
   padding-bottom: 2rem;
   margin-top: 12.4vh;
-  text-align: left;
 }
 body .main-home a {
   font-size: 2rem;
@@ -166,7 +156,6 @@ body .main-login {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
 }
 body .main-login .title {
   font-size: 2.5rem;
@@ -182,15 +171,15 @@ body .main-login .form-login {
   flex-direction: column;
   width: 35rem;
   height: auto;
-  padding: 3rem 0;
-  font-size: 1.8rem;
+  padding: 2rem 0;
+  font-size: 1.5rem;
   border: 0.5rem outset #15ff00;
   border-radius: 3rem;
 }
 body .main-login .form-login .input-form-login {
   padding: 1rem 3rem;
-  margin: 0.8rem 0;
-  color: #333;
+  margin: 0.5rem 0;
+  color: #666;
   border: 1px solid #999;
   border-radius: 2rem;
 }
@@ -199,20 +188,19 @@ body .main-login .form-login .input-form-login:focus {
 }
 body .main-login .form-login .label-form-login {
   align-self: flex-start;
-  margin-left: 6rem;
-  margin-top: 2rem;
+  margin-left: 6.8rem;
+  margin-top: 1.5rem;
 }
 body .main-login .form-login .btn-form-login {
-  padding: 1.3rem 3rem;
-  margin-top: 1rem;
+  padding: 1rem 3rem;
+  margin-top: 1.5rem;
   color: #15ff00;
   font-weight: bolder;
-  border: none;
   border-radius: 2rem;
   cursor: pointer;
 }
 body .main-login .form-login .btn-form-login:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background: #fff;
   border: 1px solid #15ff00;
 }
 body .main-register {
@@ -220,7 +208,6 @@ body .main-register {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  gap: 3rem;
 }
 body .main-register .title {
   font-size: 2.5rem;
@@ -236,15 +223,15 @@ body .main-register .form-register {
   flex-direction: column;
   width: 35rem;
   height: auto;
-  padding: 3rem 0;
-  font-size: 1.8rem;
+  padding: 2rem 0;
+  font-size: 1.5rem;
   border: 0.5rem outset #15ff00;
   border-radius: 3rem;
 }
 body .main-register .form-register .input-form-register {
   padding: 1rem 3rem;
-  margin: 0.8rem 0;
-  color: #333;
+  margin: 0.5rem 0;
+  color: #666;
   border: 1px solid #999;
   border-radius: 2rem;
 }
@@ -253,20 +240,19 @@ body .main-register .form-register .input-form-register:focus {
 }
 body .main-register .form-register .label-form-register {
   align-self: flex-start;
-  margin-left: 6rem;
-  margin-top: 2rem;
+  margin-left: 6.8rem;
+  margin-top: 1.5rem;
 }
 body .main-register .form-register .btn-form-register {
-  padding: 1.3rem 3rem;
-  margin-top: 1rem;
+  padding: 1rem 3rem;
+  margin-top: 1.5rem;
   color: #15ff00;
   font-weight: bolder;
-  border: none;
   border-radius: 2rem;
   cursor: pointer;
 }
 body .main-register .form-register .btn-form-register:hover {
-  background-color: rgba(0, 0, 0, 0);
+  background: #fff;
   border: 1px solid #15ff00;
 }
 body .main-note {
@@ -352,7 +338,7 @@ body .footer {
 body .footer p {
   text-align: center;
   font-size: 2rem;
-  color: white;
+  color: #666;
 }
 body .footer .copyright {
   margin-bottom: 2rem;
@@ -361,7 +347,7 @@ body .footer .credit {
   color: #15ff00;
 }
 body .footer .credit:hover {
-  color: #fff;
+  color: #666;
 }
 
 /*# sourceMappingURL=styles.css.map */

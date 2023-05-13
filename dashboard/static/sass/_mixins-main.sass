@@ -1,12 +1,9 @@
 @use 'variables'
 @mixin main
-    background-color: variables.$bg-color-light
 
     //SECTION GENERAL
     section
-        
+        background: variables.$bg-light
+        height: 100vh
         padding: 0 9% 3% 9%
-        color: variables.$font-color-dark
-
-        @media( max-width: 992px )
-            height: 70vh
+        color: variables.$font-dark
