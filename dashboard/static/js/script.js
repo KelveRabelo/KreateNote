@@ -95,10 +95,22 @@ function dark()
 
 
 //=================> NOTIFICATIONS <=================//
-function remove() {
-    let notification = document.querySelector(".notification");
-    notification.classList.add("remove");
-  }
+// seleciona todos os elementos com a classe "notification"
+var notifications = document.querySelectorAll('.notification');
+
+// percorre todos os elementos e define um atraso de 5 segundos para remover cada um
+for (var i = 0; i < notifications.length; i++) {
+  var notification = notifications[i];
+  setTimeout(function() {
+    // adiciona a classe 'hidden' para ocultar a notificação
+    notification.classList.add('hidden');
+    
+    // remove o elemento do DOM após 1 segundo (1000 milissegundos)
+    setTimeout(function() {
+      notification.parentNode.removeChild(notification);
+    }, 1000);
+  }, 3000);
+}
 
 //=================> REMOVE NOTE <=================//
 function deleteNote(noteId)
